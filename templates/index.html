@@ -1,0 +1,25 @@
+{% extends "layout.html" %} {% block title %} Portfolio {% endblock %} {% block
+main %}
+<div class="container border-bottom">
+  <div class="row flex-nowrap overflow-auto">
+    <div class="col">
+      <p class="fw-bold text-lg-start">Symbol</p>
+    </div>
+    <div class="col">
+      <p class="fw-bold text-lg-start">Name</p>
+    </div>
+    <div class="col"></div>
+    <div class="col">
+      <p class="fw-bold" style="text-align: center;">Shares</p>
+    </div>
+    <div class="col"></div>
+    <div class="col">
+      <p class="fw-bold text-lg-center">Price</p>
+    </div>
+    <div class="col">
+      <p class="fw-bold text-lg-center">TOTAL</p>
+    </div>
+  </div>
+</div>
+<div class="cstm-table">{% include 'purchase.html' %}</div>
+{% include 'account.html' %} {% endblock %}

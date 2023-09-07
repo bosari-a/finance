@@ -1,0 +1,25 @@
+{% for purchase in purchases %}
+<div class="container border-bottom py-2">
+  <div class="row flex-nowrap overflow-auto">
+    <div class="col col-2">
+      <div style="font-size: large; text-align: start">
+        {{ purchase.symbol }}
+      </div>
+    </div>
+    <div class="col col-2">
+      <div style="font-size: large; text-align: right">
+        {{ purchase.shares }}
+      </div>
+    </div>
+    <div class="col col-4"></div>
+    <div class="col col-2">
+      <div style="font-size: large">
+        ${{ '{0:0.2f}'.format(purchase.price) }}
+      </div>
+    </div>
+    <div class="col col-2" style="text-align: center">
+      <div>{{ purchase.transaction_date|datetime_format }}</div>
+    </div>
+  </div>
+</div>
+{% endfor %}

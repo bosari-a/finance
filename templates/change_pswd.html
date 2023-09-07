@@ -1,0 +1,41 @@
+{% extends 'layout.html' %} {% block title %}Change password{% endblock %} {%
+block main %}
+<form class="container-sm w-50" action="/change-password" method="post">
+  <div class="mb-3">
+    <label for="current" class="form-label w-100 text-start"
+      >Current Password</label
+    >
+    <input
+      type="password"
+      name="current"
+      class="form-control"
+      placeholder="Current password"
+      autocomplete="off"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="new" class="form-label w-100 text-start">New Password</label>
+    <input
+      type="password"
+      name="new"
+      class="form-control"
+      placeholder="New password"
+      autocomplete="off"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="confirmation" class="form-label w-100 text-start"
+      >Confirm</label
+    >
+    <input
+      type="password"
+      class="form-control"
+      name="confirmation"
+      placeholder="Re-enter password"
+      autocomplete="off"
+    />
+  </div>
+  <button type="submit" class="btn btn-primary">Change</button>
+</form>
+
+{% endblock %}

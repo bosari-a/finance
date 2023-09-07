@@ -1,0 +1,16 @@
+{% extends "layout.html" %} {% block title %} Quote {% endblock %} {% block main
+%}
+<form class="container-sm w-50" action="/quote" method="post">
+  <div class="mb-3">
+    <label for="quote" class="form-label w-100 text-start">Symbol</label>
+    <input
+      type="text"
+      name="symbol"
+      class="form-control"
+      placeholder="Get quote for symbol e.g. NFLX for Netflix"
+      autocomplete="off"
+    />
+  </div>
+  <button type="submit" class="btn btn-primary">Get quote</button>
+</form>
+{% endblock %}

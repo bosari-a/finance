@@ -1,0 +1,40 @@
+{% extends "layout.html" %} {% block title %} Register {% endblock %} {% block
+main %}
+
+<form class="container-sm w-50" action="/register" method="post">
+  <div class="mb-3">
+    <label for="username" class="form-label w-100 text-start">Username</label>
+    <input
+      type="text"
+      name="username"
+      class="form-control"
+      placeholder="username"
+      autocomplete="off"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="password" class="form-label w-100 text-start">Password</label>
+    <input
+      type="password"
+      name="password"
+      class="form-control"
+      placeholder="password"
+      autocomplete="off"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="confirmation" class="form-label w-100 text-start"
+      >Confirm</label
+    >
+    <input
+      type="password"
+      class="form-control"
+      name="confirmation"
+      placeholder="Re-enter password"
+      autocomplete="off"
+    />
+  </div>
+  <button type="submit" class="btn btn-primary">Register</button>
+</form>
+
+{% endblock %}
