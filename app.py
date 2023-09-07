@@ -320,7 +320,7 @@ def change_password():
 
         # else check if confirmation is same as password
         if confirm != new:
-            return apology("Sorr, password and confirmation don't match")
+            return apology("Sorry, password and confirmation don't match")
 
         # if all is valid update user's password with the new one
         new_hash = generate_password_hash(new)
